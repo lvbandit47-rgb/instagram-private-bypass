@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Practical guidance for recovering access to an Instagram account through official channels.">
+    <title>Account recovery assistant</title>
+    <link rel="stylesheet" href="/styles.css">
+  </head>
+  <body>
+    <main class="shell">
+      <header class="masthead">
+        <p class="eyebrow">A calmer way forward</p>
+        <h1>Get back to your account.</h1>
+        <p class="intro">Describe what happened and get practical next steps based on Instagram's official recovery options.</p>
+      </header>
+
+      <section class="workspace" aria-label="Account recovery assistant">
+        <div class="form-column">
+          <div class="section-heading">
+            <span class="step">01</span>
+            <div>
+              <h2>Tell us what happened</h2>
+              <p>No passwords or recovery codes needed.</p>
+            </div>
+          </div>
+          <form id="recovery-form">
+            <label for="username">Instagram username</label>
+            <input id="username" name="username" autocomplete="username" maxlength="30" required>
+
+            <label for="problem">What is the problem?</label>
+            <select id="problem" name="problem" required>
+              <option value="">Choose one</option>
+              <option value="I forgot my password">I forgot my password</option>
+              <option value="My account was hacked">My account was hacked</option>
+              <option value="I cannot access my email or phone">I cannot access my email or phone</option>
+              <option value="My account was disabled">My account was disabled</option>
+              <option value="I am having trouble with two-factor authentication">I am having trouble with two-factor authentication</option>
+            </select>
+
+            <label for="details">Anything else? <span>(optional)</span></label>
+            <textarea id="details" name="details" maxlength="2000" placeholder="For example: when you last had access, or what error you see."></textarea>
+            <p class="privacy-note">Do not include your password, security code, or private messages.</p>
+            <button type="submit">Find next steps <span aria-hidden="true">→</span></button>
+          </form>
+        </div>
+
+        <div class="answer-column">
+          <div class="section-heading">
+            <span class="step">02</span>
+            <div>
+              <h2 id="status">Your next steps</h2>
+              <p>Guidance will appear here.</p>
+            </div>
+          </div>
+          <div id="answer" class="answer empty">Your response will be based on the details you share.</div>
+          <a class="official-link" href="https://www.instagram.com/hacked/" target="_blank" rel="noreferrer">Open Instagram's official recovery page <span aria-hidden="true">↗</span></a>
+        </div>
+      </section>
+
+      <footer>Use only official Instagram recovery channels. We will never ask for your password.</footer>
+    </main>
+    <script src="/app.js" defer></script>
+  </body>
+</html>

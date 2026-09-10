@@ -1,0 +1,43 @@
+:root {
+  --ink: #17221f;
+  --muted: #66736d;
+  --line: #d6dfd9;
+  --paper: #f4f5ef;
+  --panel: #ffffff;
+  --accent: #df5c3b;
+  --accent-dark: #a63d27;
+  --mint: #dcebe1;
+}
+
+* { box-sizing: border-box; }
+body { margin: 0; color: var(--ink); background: var(--paper); font-family: "Trebuchet MS", sans-serif; }
+body::before { content: ""; position: fixed; inset: 0; pointer-events: none; background: linear-gradient(120deg, rgba(220,235,225,.7), transparent 42%), radial-gradient(circle at 90% 15%, rgba(223,92,59,.13), transparent 25%); }
+.shell { width: min(1120px, calc(100% - 48px)); margin: 0 auto; padding: 72px 0 32px; position: relative; }
+.masthead { max-width: 670px; margin-bottom: 58px; }
+.eyebrow, .step, footer { font: 500 11px/1.4 "Courier New", monospace; letter-spacing: 0; text-transform: uppercase; }
+.eyebrow { color: var(--accent-dark); margin: 0 0 18px; }
+h1 { font-size: clamp(46px, 7vw, 86px); letter-spacing: 0; line-height: .98; margin: 0 0 22px; max-width: 760px; }
+.intro { color: var(--muted); font-size: 18px; line-height: 1.6; max-width: 550px; margin: 0; }
+.workspace { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, .9fr); background: var(--panel); border: 1px solid var(--line); box-shadow: 12px 14px 0 var(--mint); }
+.form-column, .answer-column { padding: 40px; }
+.form-column { border-right: 1px solid var(--line); }
+.section-heading { display: flex; gap: 16px; align-items: flex-start; margin-bottom: 34px; }
+.step { color: var(--accent); padding-top: 5px; }
+h2 { font-size: 20px; line-height: 1.2; margin: 0 0 7px; }
+.section-heading p { color: var(--muted); font-size: 13px; margin: 0; }
+label { display: block; font-size: 13px; font-weight: 700; margin: 0 0 9px; }
+label span { color: var(--muted); font-weight: 400; }
+input, select, textarea { width: 100%; color: var(--ink); background: #fbfcf9; border: 1px solid var(--line); border-radius: 0; font: inherit; font-size: 14px; margin-bottom: 23px; padding: 14px 15px; }
+input:focus, select:focus, textarea:focus { outline: 2px solid var(--accent); outline-offset: 2px; }
+textarea { min-height: 156px; resize: vertical; }
+button { width: 100%; display: flex; justify-content: space-between; align-items: center; border: 0; color: white; background: var(--ink); cursor: pointer; font: 700 14px "Trebuchet MS", sans-serif; padding: 17px 19px; transition: background .2s, transform .2s; }
+button:hover:not(:disabled) { background: var(--accent-dark); transform: translateY(-2px); }
+button:disabled { cursor: wait; opacity: .6; }
+.privacy-note { color: var(--muted); font-size: 12px; line-height: 1.5; margin: -6px 0 20px; }
+.answer-column { background: linear-gradient(145deg, #fff, #f6faf5); display: flex; flex-direction: column; min-height: 480px; }
+.answer { white-space: pre-wrap; color: #2e3d37; font-size: 15px; line-height: 1.75; flex: 1; }
+.answer.empty { color: var(--muted); font-size: 14px; line-height: 1.6; }
+.official-link { color: var(--accent-dark); font-size: 13px; font-weight: 700; text-decoration: none; border-top: 1px solid var(--line); padding-top: 20px; }
+.official-link span { margin-left: 7px; }
+footer { color: var(--muted); margin-top: 46px; line-height: 1.6; }
+@media (max-width: 760px) { .shell { width: min(100% - 28px, 560px); padding-top: 42px; } .masthead { margin-bottom: 38px; } .workspace { display: block; box-shadow: 7px 8px 0 var(--mint); } .form-column { border-right: 0; border-bottom: 1px solid var(--line); } .form-column, .answer-column { padding: 28px 23px; } .answer-column { min-height: 340px; } }
